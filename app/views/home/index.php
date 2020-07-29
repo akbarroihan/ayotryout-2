@@ -41,7 +41,7 @@
                         <li><a class="page-scroll" href="#testimonials">Testimoni</a></li>
                         <li><a class="page-scroll" href="#task">Info Ujian</a></li>
                         <li><a class="page-scroll" href="#contact">Contact</a></li>
-                        <li><a class="page-scroll navy-bg" href="<?= BASEURL; ?>/login">Login</a></li>
+                        <li><a class="page-scroll navy-bg" href="<?= BASEURL; ?>/login">login</a></li>
                     </ul>
                 </div>
             </div>

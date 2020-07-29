@@ -31,6 +31,34 @@
                         <input type="password" id="re-password" name="re-password" class="form-control" placeholder="Ulangi Password" autocomplete="new-password" required="">
                         <span toggle="#re-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                     </div>
+
+                    <h3><strong> - Pembayaran - </strong></h3>
+                    <div class="form-group">
+                    <select name="pilihan _jenjang" id="pilihan_jenjang" class="form-control" required>
+                        <option value="">- Pilih -</option>
+                        <option biaya="5000" value="sd">SD</option>
+                        <option biaya="10000" value="sma">SMA</option>
+                        <option biaya="25000" value="stan_ptkin">STAN/PTKIN</option>
+                    </select>
+                    
+                    </div>
+
+                    <div class="form-group">
+                        <select name="metode_bayar" id="metode_bayar" class="form-control" required>
+                            <option value="">- Pilih -</option>
+                            <option value="VC">VISA</option>
+                            <option value="BK">BCA Klik Play</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Rp. </span>
+                        <input type="number" id="biaya" min="0" step="any" class="form-control" name="biaya" placeholder="Biaya yang diperlukan" aria-describedby="addon-wrapping" disabled>
+                        <span class="input-group-addon">,00</span>
+                    </div>
+                    </div>
+
                     <div class="form-group">
                     <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> <strong> Setuju terhadap
                                 persyaratan dan kebijakan</strong>
@@ -56,6 +84,14 @@
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
             });
+ 
+        $("#pilihan_jenjang").on("change", function(){
+        // ambil nilai
+        var biaya = $("#pilihan_jenjang option:selected").attr("biaya");
+        // pindahkan nilai ke input
+        $("#biaya").val(biaya);
+        });
+
         });
     </script>
 </body>
